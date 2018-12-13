@@ -199,6 +199,7 @@ $config = array(
                         'Consultant Ophthalmologist',
                         'Other specialist',
                 ),
+        'general_practitioner_label' => "Practitioner",
     ),
 );
 
