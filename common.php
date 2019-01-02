@@ -200,6 +200,12 @@ $config = array(
                         'Other specialist',
                 ),
         'general_practitioner_label' => "Practitioner",
+        'patient_identifiers' => array(
+            'RVEEH_UR' => array(
+                'code' => 'RVEEH_UR',
+                'label' => 'RVEEH_UR'
+            )
+        ),
     ),
 );
 
