@@ -201,10 +201,11 @@ $config = array(
                 ),
         'general_practitioner_label' => "Practitioner",
         'nhs_num_label' => 'Medicare ID',
+        'hos_num_label' => 'CERA ID',
         'patient_identifiers' => array(
             'RVEEH_UR' => array(
                 'code' => 'RVEEH_UR',
-                'label' => 'RVEEH_UR'
+                'label' => 'RVEEH UR'
             )
         ),
     ),
