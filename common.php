@@ -200,6 +200,7 @@ $config = array(
                         'Other specialist',
                 ),
         'general_practitioner_label' => "Practitioner",
+        'nhs_num_label' => 'Medicare ID',
     ),
 );
 
