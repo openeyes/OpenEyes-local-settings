@@ -108,7 +108,6 @@ $config = array(
         'OphInVisualfields',
         'OphInBiometry',
         'OphCoMessaging' => array('class' => '\OEModule\OphCoMessaging\OphCoMessagingModule'),
-        'PASAPI' => array('class' => '\OEModule\PASAPI\PASAPIModule'),
         'OphInLabResults',
         'OphCoCvi' => array('class' => '\OEModule\OphCoCvi\OphCoCviModule'),
         // Uncomment next section if you want to use the genetics module
