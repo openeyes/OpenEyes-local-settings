@@ -199,15 +199,17 @@ $config = array(
                         'Consultant Ophthalmologist',
                         'Other specialist',
                 ),
-        'general_practitioner_label' => "Practitioner",
+        'general_practitioner_label' => "GP",
         'nhs_num_label' => 'Medicare ID',
         'hos_num_label' => 'CERA ID',
         'patient_identifiers' => array(
             'RVEEH_UR' => array(
                 'code' => 'RVEEH_UR',
-                'label' => 'RVEEH UR'
+                'label' => 'RVEEH UR',
+                'unique' => true,
             )
         ),
+        'default_country' => 'Australia',
     ),
 );
 
