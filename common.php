@@ -209,6 +209,7 @@ $config = array(
             )
         ),
         'default_country' => 'Australia',
+        'canViewSummary' => true,
     ),
 );
 
