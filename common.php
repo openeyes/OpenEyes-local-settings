@@ -210,7 +210,10 @@ $config = array(
         ),
         'default_country' => 'Australia',
         'canViewSummary' => true,
+        'gp_label' => 'Referring Practitioner',
+        'general_practitioner_label' => "Referring Practitioner",
     ),
+
 );
 
 return $config;
