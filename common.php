@@ -198,7 +198,7 @@ $config = array(
                         'Consultant Ophthalmologist',
                         'Other specialist',
                 ),
-        'general_practitioner_label' => "GP",
+        'general_practitioner_label' => "Referring Practitioner",
         'nhs_num_label' => 'Medicare ID',
         'hos_num_label' => 'CERA ID',
         'patient_identifiers' => array(
@@ -210,7 +210,9 @@ $config = array(
         ),
         'default_country' => 'Australia',
         'canViewSummary' => true,
+        'gp_label' => 'Referring Practitioner',
     ),
+
 );
 
 return $config;
