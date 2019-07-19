@@ -201,6 +201,7 @@ $config = array(
         'general_practitioner_label' => "Referring Practitioner",
         'nhs_num_label' => 'Medicare ID',
         'hos_num_label' => 'CERA ID',
+        'pad_hos_num' => '%00s',
         'patient_identifiers' => array(
             'RVEEH_UR' => array(
                 'code' => 'RVEEH_UR',
@@ -212,7 +213,6 @@ $config = array(
         'canViewSummary' => true,
         'gp_label' => 'Referring Practitioner',
     ),
-
 );
 
 return $config;
