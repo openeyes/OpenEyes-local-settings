@@ -1,20 +1,20 @@
 <?php
 /**
- * OpenEyes.
- *
- * (C) Moorfields Eye Hospital NHS Foundation Trust, 2008-2011
- * (C) OpenEyes Foundation, 2011-2013
- * This file is part of OpenEyes.
- * OpenEyes is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
- * OpenEyes is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
- * You should have received a copy of the GNU Affero General Public License along with OpenEyes in a file titled COPYING. If not, see <http://www.gnu.org/licenses/>.
- *
- * @link http://www.openeyes.org.uk
- *
- * @author OpenEyes <info@openeyes.org.uk>
- * @copyright Copyright (c) 2011-2013, OpenEyes Foundation
- * @license http://www.gnu.org/licenses/agpl-3.0.html The GNU Affero General Public License V3.0
- */
+* OpenEyes.
+*
+* (C) Moorfields Eye Hospital NHS Foundation Trust, 2008-2011
+* (C) OpenEyes Foundation, 2011-2013
+* This file is part of OpenEyes.
+* OpenEyes is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+* OpenEyes is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+* You should have received a copy of the GNU Affero General Public License along with OpenEyes in a file titled COPYING. If not, see <http://www.gnu.org/licenses/>.
+*
+* @link http://www.openeyes.org.uk
+*
+* @author OpenEyes <info@openeyes.org.uk>
+* @copyright Copyright (c) 2011-2013, OpenEyes Foundation
+* @license http://www.gnu.org/licenses/agpl-3.0.html The GNU Affero General Public License V3.0
+*/
 
 if (file_exists('/etc/openeyes/db.conf')) {
     $db = parse_ini_file('/etc/openeyes/db.conf');
@@ -194,34 +194,24 @@ $config = array(
         // set this to none if you want to suppress XML output
         'docman_xml_format' => 'none',
         'contact_labels' => array(
-            'Staff',
-            'Consultant Ophthalmologist',
-            'Other specialist',
-        ),
-        'general_practitioner_label' => "Practitioner",
+                        'Staff',
+                        'Consultant Ophthalmologist',
+                        'Other specialist',
+                ),
+        'general_practitioner_label' => "Referring Practitioner",
         'nhs_num_label' => 'Medicare ID',
         'hos_num_label' => 'CERA ID',
+        'pad_hos_num' => '%00s',
         'patient_identifiers' => array(
             'RVEEH_UR' => array(
                 'code' => 'RVEEH_UR',
-                'label' => 'RVEEH UR'
+                'label' => 'RVEEH UR',
+                'unique' => true,
             )
         ),
-        'county_label' => 'state',
         'default_country' => 'Australia',
-//        Hospital number auto increment
-        'set_auto_increment' => 'on',
-//        Hospital number auto generate starts from:
-        'hos_num_start' => 10000,
-        'nhs_num_private' => true,
-//        Set this to 'on' for any user to be able to add disorders
-        'user_add_disorder' => 'on',
-//        Setting for any specific ethnic groups
-        'ethnic_group_filters' => array(
-            'Indigenous Australian',
-            'Greek',
-            'Italian'
-        ),
+        'canViewSummary' => true,
+        'gp_label' => 'Referring Practitioner',
     ),
 );
 
