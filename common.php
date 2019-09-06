@@ -212,6 +212,8 @@ $config = array(
         'default_country' => 'Australia',
         'canViewSummary' => true,
         'gp_label' => 'Referring Practitioner',
+        'default_patient_import_context' => 'Historic Data Entry',
+        'default_patient_import_subspecialty' => 'GL',
     ),
 );
 
