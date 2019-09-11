@@ -212,6 +212,106 @@ $config = array(
         'default_country' => 'Australia',
         'canViewSummary' => true,
         'gp_label' => 'Referring Practitioner',
+        'default_patient_import_context' => 'Historic Data Entry',
+        'default_patient_import_subspecialty' => 'GL',
+        // Copied the menu_bar_items array from core and added the restricted parameter for worklist and analytics because it is not required for CERA.
+        'menu_bar_items' => array(
+            'admin' => array(
+                'title' => 'Admin',
+                'uri' => 'admin',
+                'position' => 1,
+                'restricted' => array('admin'),
+            ),
+            'audit' => array(
+                'title' => 'Audit',
+                'uri' => 'audit',
+                'position' => 2,
+                'restricted' => array('TaskViewAudit'),
+            ),
+            'reports' => array(
+                'title' => 'Reports',
+                'uri' => 'report',
+                'position' => 3,
+                'restricted' => array('Report'),
+                'userrule' => 'isSurgeon',
+            ),
+            'cataract' => array(
+                'title' => 'Cataract Audit',
+                'uri' => 'dashboard/cataract',
+                'position' => 4,
+                'userrule' => 'isSurgeon',
+                'restricted' => array('admin'),
+                'options' => array('target' => '_blank'), ),
+            'nodexport' => array(
+                'title' => 'NOD Export',
+                'uri' => 'NodExport',
+                'position' => 5,
+                'restricted' => array('NOD Export'),
+            ),
+            'cxldataset' => array(
+                'title' => 'CXL Dataset',
+                'uri' => 'CxlDataset',
+                'position' => 6,
+                'restricted' => array('CXL Dataset'),
+            ),
+            'patientmergerequest' => array(
+                'title' => 'Patient Merge',
+                'uri' => 'patientMergeRequest/index',
+                'position' => 17,
+                'restricted' => array('Patient Merge', 'Patient Merge Request'),
+            ),
+            'patient' => array(
+                'title' => 'Add Patient',
+                'uri' => 'patient/create',
+                'position' => 46,
+                'restricted' => array('TaskAddPatient'),
+            ),
+            'practices' => array(
+                'title' => 'Practices',
+                'uri' => 'practice/index',
+                'position' => 11,
+                'restricted' => array('TaskViewPractice'),
+            ),
+            'forum' => array(
+                'title' => 'FORUM',
+                'uri' => "javascript:oelauncher('forum');",
+                'requires_setting' => array('setting_key'=>'enable_forum_integration', 'required_value'=>'on'),
+                'position' => 90,
+            ),
+            'disorder' => array(
+                'title' => 'Manage Disorders',
+                'uri' => "/disorder/index",
+                'requires_setting' => array('setting_key'=>'user_add_disorder', 'required_value'=>'on'),
+                'position' => 91,
+            ),
+            'gps' => array(
+                'title' => 'Practitioners',
+                'uri' => 'gp/index',
+                'position' => 10,
+                'restricted' => array('TaskViewGp'),
+            ),
+            'analytics' => array(
+                'title' => 'Analytics',
+                'uri' => '/Analytics/medicalRetina',
+                'position' => 11,
+                'restricted' => array(false),
+            ),
+            'worklist' => array(
+                'title' => 'Worklists',
+                'uri' => '/worklist',
+                'position' => 3,
+                'restricted' => array(false),
+            ),
+            'patient_import' => array(
+                'title' => 'Import Patients',
+                'uri' => 'csv/upload?context=patients',
+                'position' => 47,
+                'restricted' => array('admin'),
+            ),
+        ),
+        'exclude_admin_structure_param_list' => array(
+            'Worklist',
+        ),
     ),
 );
 

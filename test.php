@@ -17,7 +17,7 @@
 */
 
 
-$db_test_name = getenv('DATABASE_TEST_NAME') ? getenv('DATABASE_TEST_NAME') : 'openeyes_test';
+$db_test_name = getenv('DATABASE_TEST_NAME') ? getenv('DATABASE_TEST_NAME') : 'openeyes';
 $db_test_host = getenv('DATABASE_TEST_HOST') ? getenv('DATABASE_TEST_HOST') : '127.0.0.1';
 $db_test_port = getenv('DATABASE_TEST_PORT') ? getenv('DATABASE_TEST_PORT') : '3306';
 $db_test_user = getenv('DATABASE_TEST_USER') ? getenv('DATABASE_TEST_USER') : 'openeyes';
