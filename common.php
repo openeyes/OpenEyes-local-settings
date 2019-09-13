@@ -130,7 +130,8 @@ $config = array(
         'ldap_admin_dn' => 'CN=openeyes,CN=Users,dc=example,dc=com',
         'ldap_password' => '',
         'ldap_dn' => 'CN=Users,dc=example,dc=com',
-        'environment' => 'live',
+        // Set to 'dev' for local development
+        'environment' => 'dev',
         'google_analytics_account' => '',
         'local_users' => array('admin', 'username'),
         //'log_events' => true,
@@ -183,7 +184,7 @@ $config = array(
         'docman_export_dir' => '/tmp/docman',
         'docman_login_url' => 'http://localhost/site/login',
         'docman_user' => 'admin',
-        'docman_password' => 'speech advice advantage somehow',
+        'docman_password' => 'admin',
         'docman_print_url' => 'http://localhost/OphCoCorrespondence/default/PDFprint/',
         // possible values:
         // none => XML output is suppressed
