@@ -202,11 +202,13 @@ $config = array(
         'nhs_num_label' => 'Medicare ID',
         'hos_num_label' => 'CERA ID',
         'pad_hos_num' => '%00s',
+//        alow null check is to set whether duplicate checks for patient are to be performed on null RVEEh UR number or any further added patient identifiers
         'patient_identifiers' => array(
             'RVEEH_UR' => array(
                 'code' => 'RVEEH_UR',
                 'label' => 'RVEEH UR',
                 'unique' => true,
+                'allow_null_check' => false,
             )
         ),
         'default_country' => 'Australia',
