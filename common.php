@@ -135,7 +135,7 @@ $config = array(
         'google_analytics_account' => '',
         'local_users' => array('admin', 'username'),
         //'log_events' => true,
-        'institution_code' => 'CERA',
+        'institution_code' => 'NEW',
         'specialty_codes' => array(130),
         //'default_site_code' => '',
         'specialty_sort' => array(130, 'SUP'),
@@ -202,6 +202,29 @@ $config = array(
         'general_practitioner_label' => "Referring Practitioner",
         'nhs_num_label' => 'Medicare ID',
         'hos_num_label' => 'CERA ID',
+//        Parameter for short labels in patient panel, or anywhere real estate is at a premium
+        'nhs_num_label_short' => 'Medicare',
+        'hos_num_label_short' => 'CERA',
+        'gender_short' => 'Gen',
+//        Set the field names with their values, 'mandatory' if a a field needs to be mandatory, 'hidden' if a field needs to be hidden, or '' if neither
+        'add_patient_fields' => [ 'title' => '',
+                                  'first_name' => 'mandatory',
+                                  'last_name' => 'mandatory',
+                                  'dob' => 'mandatory',
+                                  'primary_phone' => '',
+                                  'hos_num' => 'mandatory',
+                                  'nhs_num_status' => 'hidden'
+                                        ],
+//        Set the parameter below to true if you want to use practitioner praactice associations feature
+        'use_contact_practice_associate_model' => true,
+        //        Set the parameter below to indicate whether PAS is being used or not
+        'pas_in_use' => true,
+//        List the visibility of elements in the Patient Panel Popup - Demographics. Setting them as true or false
+        'demographics_content' => [
+                                    'mobile' => false,
+                                    'next_of_kin' => false,
+                                    'pas' => true,
+                                    ],
         'pad_hos_num' => '%00s',
 //        alow null check is to set whether duplicate checks for patient are to be performed on null RVEEh UR number or any further added patient identifiers
         'patient_identifiers' => array(
@@ -212,8 +235,8 @@ $config = array(
                 'allow_null_check' => false,
             )
         ),
-        'default_country' => 'Australia',
         'canViewSummary' => true,
+        'default_country' => 'Australia',
         'gp_label' => 'Referring Practitioner',
         'default_patient_import_context' => 'Historic Data Entry',
         'default_patient_import_subspecialty' => 'GL',
@@ -295,9 +318,9 @@ $config = array(
             ),
             'analytics' => array(
                 'title' => 'Analytics',
-                'uri' => '/Analytics/medicalRetina',
+                'uri' => '/Analytics/analyticsReports',
                 'position' => 11,
-                'restricted' => array(false),
+//                'restricted' => array('admin'),
             ),
             'worklist' => array(
                 'title' => 'Worklists',
